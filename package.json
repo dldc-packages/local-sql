@@ -1,21 +1,21 @@
 {
-  "name": "package-template",
+  "name": "local-sql",
   "version": "0.0.0",
-  "description": "",
+  "description": "Expose a SQL file in a local server",
   "keywords": [],
-  "homepage": "https://github.com/etienne-dldc/package-template#readme",
+  "homepage": "https://github.com/etienne-dldc/local-sql#readme",
   "bugs": {
-    "url": "https://github.com/etienne-dldc/package-template/issues"
+    "url": "https://github.com/etienne-dldc/local-sql/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/etienne-dldc/package-template.git"
+    "url": "git+ssh://git@github.com/etienne-dldc/local-sql.git"
   },
   "license": "MIT",
   "author": "Etienne Dldc <e.deladonchamps@gmail.com>",
   "sideEffects": false,
   "main": "dist/index.js",
-  "module": "dist/package-template.esm.js",
+  "module": "dist/local-sql.esm.js",
   "typings": "dist/index.d.ts",
   "directories": {
     "example": "examples",
@@ -25,9 +25,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsdx build && denoify",
+    "build": "tsdx build",
     "codecov": "codecov",
-    "preinstall": "npx only-allow pnpm",
     "pub": "yarn build && np",
     "start": "tsdx watch",
     "test": "tsdx test --coverage"
@@ -35,8 +34,7 @@
   "devDependencies": {
     "@types/jest": "^26.0.15",
     "codecov": "^3.8.1",
-    "core-js": "3.7.0",
-    "denoify": "^0.6.1",
+    "core-js": "3.10.1",
     "np": "^7.0.0",
     "tsdx": "^0.14.1",
     "tslib": "^2.0.3",
@@ -45,9 +43,5 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
-  },
-  "np": {
-    "yarn": false,
-    "cleanup": false
   }
 }
