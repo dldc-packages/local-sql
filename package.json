@@ -1,6 +1,6 @@
 {
   "name": "local-sql",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Expose a SQL file in a local server",
   "keywords": [],
   "homepage": "https://github.com/etienne-dldc/local-sql#readme",
