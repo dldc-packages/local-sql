@@ -17,22 +17,44 @@
   "main": "dist/index.js",
   "module": "dist/local-sql.esm.js",
   "typings": "dist/index.d.ts",
+  "bin": {
+    "local-sql": "bin/local-sql.js"
+  },
   "directories": {
     "example": "examples",
     "test": "tests"
   },
   "files": [
-    "dist"
+    "dist",
+    "bin",
+    "README.md"
   ],
   "scripts": {
     "build": "tsdx build",
     "codecov": "codecov",
     "pub": "yarn build && np",
     "start": "tsdx watch",
+    "run": "npx -p . local-sql --file demo.db --port 3001",
     "test": "tsdx test --coverage"
   },
+  "dependencies": {
+    "arg": "^5.0.0",
+    "fastify": "^3.14.2",
+    "fastify-cors": "^5.2.0",
+    "fs-extra": "^9.1.0",
+    "http-errors": "^1.8.0",
+    "immer": "^9.0.1",
+    "inquirer": "^8.0.0",
+    "is-plain-object": "^5.0.0",
+    "sqlite3": "^5.0.2",
+    "zod": "3.0.0-alpha.33"
+  },
   "devDependencies": {
+    "@types/fs-extra": "^9.0.11",
+    "@types/http-errors": "^1.8.0",
+    "@types/inquirer": "^7.3.1",
     "@types/jest": "^26.0.15",
+    "@types/sqlite3": "^3.1.7",
     "codecov": "^3.8.1",
     "core-js": "3.10.1",
     "np": "^7.0.0",
