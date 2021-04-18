@@ -82,7 +82,7 @@ export async function command() {
   });
 
   server.get('/', async () => {
-    return { ok: true };
+    return help;
   });
 
   server.post('/', async (request, reply) => {
