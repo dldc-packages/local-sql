@@ -81,6 +81,10 @@ export async function command() {
     origin: origin.length === 0 ? '*' : origin
   });
 
+  server.get('/', async () => {
+    return { ok: true };
+  });
+
   server.post('/', async (request, reply) => {
     if (typeof request.body !== 'object') {
       reply.send(new HttpErrors.BadRequest(`Body must be JSON`));
