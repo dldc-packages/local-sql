@@ -10,7 +10,7 @@ import HttpErrors from 'http-errors';
 import { isPlainObject } from 'is-plain-object';
 import produce from 'immer';
 
-const QuerySchema = z.object({
+export const QuerySchema = z.object({
   _type: z.literal('query'),
   mode: z.enum(['get', 'all']),
   query: z.string(),
